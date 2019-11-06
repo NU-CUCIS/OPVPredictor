@@ -1,4 +1,5 @@
-Predictor for Highest Occupied Molecular Orbital (HOMO) Energy for Organic Photovoltaic Donor Molecules
+# Organic Photovoltaic Predictor 
+This calculator is published at (http://info.eecs.northwestern.edu/OPVPredictor)
 
 ## Developer Team
 
