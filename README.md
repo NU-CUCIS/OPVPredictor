@@ -7,6 +7,15 @@ This calculator is published at (http://info.eecs.northwestern.edu/OPVPredictor)
 3. Rdkit 2012.9 (or higher)  
 4. Numpy 1.4.1 (or higher) 
 
+## List of Files: 
+* __init__.py: Core python file that launches the predictor  
+* atomModel.pkl: Pickle file containing the model for predicting HOMO from Atom Pair fingerprints 
+* maccsModel.pkl: Pickle file containing the model for predicting HOMO from MACCS fingerprints 
+* static directory: This directory contains the static elements (boostrap theme files, images etc)
+* templates directory: This directory contains 2 files 
+  - index.html: HTML file for the homepage (request page)
+  - OPV.html: HTML file for the response page 
+
 
 ## Developer Team
 
