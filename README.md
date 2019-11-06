@@ -1,6 +1,13 @@
 # Organic Photovoltaic Predictor 
 This calculator is published at (http://info.eecs.northwestern.edu/OPVPredictor)
 
+## Pre-requisites: 
+1. Python 2.7 (or higher) 
+2. Sklearn 0.14 (or higher) 
+3. Rdkit 2012.9 (or higher)  
+4. Numpy 1.4.1 (or higher) 
+
+
 ## Developer Team
 
 The code was developed by the <a href="http://cucis.ece.northwestern.edu/">CUCIS</a> group at the Electrical and Computer Engineering Department at Northwestern University. 
