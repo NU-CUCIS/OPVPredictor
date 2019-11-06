@@ -8,7 +8,7 @@ This calculator is published at (http://info.eecs.northwestern.edu/OPVPredictor)
 4. Numpy 1.4.1 (or higher) 
 
 ## List of Files: 
-* __init__.py: Core python file that launches the predictor  
+* \__init__.py: Core python file that launches the predictor  
 * atomModel.pkl: Pickle file containing the model for predicting HOMO from Atom Pair fingerprints 
 * maccsModel.pkl: Pickle file containing the model for predicting HOMO from MACCS fingerprints 
 * static directory: This directory contains the static elements (boostrap theme files, images etc)
