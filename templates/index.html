@@ -1,0 +1,90 @@
+<html>
+<link rel=stylesheet media=screen href="/OPVPredictor/static/bootstrap.min.css">
+<head>
+        <title>{{ htmlTitle }}</title>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="row">
+
+			<div class="text-center">
+				<h1>Organic Photovoltaic Predictor</h1>
+			</div>
+		</div>
+	</header>
+	</div>
+	<div class="container">
+	<nav class="navbar navbar-default">
+	<div class="navbar-header">
+	<ul class="nav navbar-nav">
+		<li role="presentation" class="active"><a href="#">Home</a></li>
+	</ul>
+	</div>
+	</nav>
+	</div>
+	<div class="container">
+	<p><small>Disclaimer: The outcome calculator results are estimates based on data from the <a href="https://figshare.com/articles/HOPV15_Dataset/1610063/4">HOPV'15</a> dataset. All results are provided for informational purposes only, in furtherance of the developers' educational mission.</small></p>
+	<p>Welcome to our online Calculator . To obtain HOMO value of your donor molecule, click on the submit button. The predicted HOMO value is calculated using extra trees regressor on AtomPair Fingerprints. The raw data with ground truth labels as well as calculations of conformers as well as predicted outputs is made available for <a href="/OPVPredictor/static/opv_data.json.zip" download>
+  download</a>.</p>
+<!-- <p align="center"> <img src="/OPVPredictor/static/OPVNew.png" width="350px"> <img src="/OPVPredictor/static/OPV.png" width="350px"></p> -->
+<p> When a user enters the SMILES formula, our system generates the molecular fingerprint for that compound. Diagram to the right depict the structural formula, SMILES representation and fingerprint of a typical chemical compound. Our system uses the fingerprint as attributes for the machine learning model. The predicted HOMO values are in atomic unit (a.u.). 1 a.u. is equivalent to 27.21 eV.</p>
+<!-- <p>Researchers can use this predicted HOMO value, and then use the Scharber model to find the power conversion efficiency by substituting the requisite LUMO values of acceptor molecules, filling factor, electrical fill factor and incident-light intensity.</p> -->
+  </div>
+	<div class="container">
+
+			<div class="row">
+			<form action="/OPVPredictor/OPV.html" class="form-horizontal" id=form method="POST">
+			<div class="form-group">
+					<div class="col-sm-10">
+            <h4>Please enter donor molecule formula (in SMILES format)</h4>
+                  <input id="smiles" name="smiles" class="form-control" type=text size=200 value= "Cc1csc(c2ccc(c3cc(C)c(c4cc5c(s4)c(c4ccc(C)cc4)c4ccsc4c5c4ccc(C)cc4)s3)c3nsnc23)c1"><br>
+            <h4>Enter the LUMO value of acceptor (in eV)</h4>
+                  <input id="lumo" name="lumo" class="form-control" type=text size=10 value= "-2.1"><br>
+            <!-- <h4>Value of filler factor</h4>
+                <input id="filler" name="filler" class="form-control" type=text size=10 value= "0.68"><br>
+            <h4>Value of electric current (in milliampere mA per square cm)</h4>
+                  <input id="current" name="current" class="form-control" type=text size=10 value= "10.5"><br>
+            <h4>Value of light intensity (in megaWatt MW per square cm)</h4>
+            <input id="intensity" name="intensity" class="form-control" type=text size=10 value= "10"> -->
+
+					</div>
+				</div>
+			</div>
+      <br>
+      Example input for donor molecule (in SMILES format): <i>Cc1csc(c2ccc(c3cc(C)c(c4cc5c(s4)c(c4ccc(C)cc4)c4ccsc4c5c4ccc(C)cc4)s3)c3nsnc23)c1</i>
+      <br><br>
+      	<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div>
+                        </form>
+			</div>
+		</div>
+	</div>
+  <br><br>
+  	<div class="container">
+  <p><i>Energy is generated when the solar energy excites the electrons (as depicted in the image on the left) which releases the electrons in the highest occupied molecular orbital(HOMO) in the donor layer.
+    The electronic charge difference between the HOMO of the donor layer and lowest occupied molecular orbital(LUMO) determines the predicted power conversion efficiency of an organic solar cell.
+    Our models based on machine learning can predict the HOMO of any donor molecule given the chemical formula of a compound in SMILES format.
+    SMILES format allows us to represent the structure of a compound. </i> <br><br></p>
+</body>
+<div class="container">
+  <p>
+  <br><br>Developer team: <a href="http://arindampaul.me/">Arindam Paul</a>, <a href="http://users.eecs.northwestern.edu/~ankitag">Ankit Agrawal</a>, <a href="http://users.eecs.northwestern.edu/~wkliao">Wei-keng Liao</a>, <a href="http://users.eecs.northwestern.edu/~choudhar">Alok Choudhary</a>
+  </p>
+<p>
+Collaborators: <a href="http://furmanchuk.com/">Alona Furmanchuk</a>
+</p>
+<h2>Acknowledgements</h2>
+<p> This work was performed under the following financial assistance award 70NANB19H005 from U.S. Department of Commerce, National Institute of Standards and
+Technology as part of the Center for Hierarchical Materials Design (CHiMaD).
+</p>
+<h2>References:</h2>
+<p> A. Paul, A. Furmanchuk, W. Liao, A. Choudhary and A. Agrawal. Property Prediction of Organic Donor Molecules for Photovoltaic Applications using Extremely Randomized Trees. Journal of Molecular Informatics, 2019, Volume 38. [<a href="https://doi.org/10.1002/minf.201900038">url</a>] </p>
+
+  <p><a href="http://cucis.ece.northwestern.edu">Center for Ultra-scale Computing and Information Security (CUCIS)</a>, EECS Department, Northwestern University, Evanston, IL 60208, USA</p>
+</div>
+
+</html>

@@ -1,0 +1,76 @@
+<html>
+<link rel=stylesheet media=screen href="/OPVPredictor/static/bootstrap.min.css">
+<head>
+        <title>OPV Predictor</title>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="row">
+
+			<div class="text-center">
+				<h1>Organic Photovoltaic Predictor</h1>
+			</div>
+		</div>
+	</header>
+	</div>
+	<div class="container">
+	<nav class="navbar navbar-default">
+	<div class="navbar-header">
+	<!-- header bar -->
+	<ul class="nav navbar-nav">
+		<li role="presentation" class="active"><a href="#">Home</a></li>
+
+	</ul>
+	</div>
+	</nav>
+	</div>
+	<body>
+	<div class="container">
+	<p><small>Disclaimer: The outcome calculator results are estimates based on data from the <a href="https://figshare.com/articles/HOPV15_Dataset/1610063/4">HOPV'15</a> dataset. All results are provided for informational purposes only, in furtherance of the developers' educational mission.</small></p>
+<p align="center"> <img src="/OPVPredictor/static/OPVNew.png" width="350px"> <img src="/OPVPredictor/static/OPV.png" width="350px"></p>  <p>Researchers can use this predicted HOMO value, and then use the Scharber model to find the power conversion efficiency by substituting the requisite LUMO values of acceptor molecules, filling factor, electrical fill factor and incident-light intensity.</p>
+  </div>
+	<div class="container">
+			<div class="row">
+			<form action="/OPVPredictor/" class="form-horizontal" id={{form}} method="POST">
+	<div class="form-group">
+    <h4>The donor molecule formula (in SMILES format)</h4>
+          <div class="col-sm-10">
+                  <input class="form-control" type=text size=200 name=smiles_formula form=smiles_form value={{ selectString1 }}><br>
+          <h4>Energy of LUMO level of desired acceptor (in eV)</h4>
+                        <input class="form-control" type=text size=10 name=e_lumo form=smiles_form value={{ selectString2 }}><br>
+          <h4>Filler Factor</h4>
+                        <input class="form-control" type=text size=10 name=filler_factor form=smiles_form value={{ selectString3 }}><br>
+                <h4>Value of electric current (in milliampere mA per square cm)</h4>
+                              <input class="form-control" type=text size=10 name=electric_current form=smiles_form value={{ selectString4 }}><br>
+                      <h4>Value of light intensity (in megaWatt MW per square cm)</h4>
+                                    <input class="form-control" type=text size=10 name=light_intensity form=smiles_form value={{ selectString5 }}><br>
+                            </div>
+
+                <br><br>
+				</div>
+			</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Back to homepage</button>
+					</div>
+				</div>
+                        </form>
+			</div>
+		</div>
+    <div class="container">
+    <h4> <br><br>{{template_text}} </h4>
+    </div>
+	</div>
+    <br><br>
+    <div class="container"><i>
+    <p>Energy is generated when the solar energy excites the electrons (as depicted in the image on the left) which releases the electrons in the highest occupied molecular orbital(HOMO) in the donor layer. The electronic charge difference between the HOMO of the donor layer and lowest occupied molecular orbital(LUMO) determines the predicted power conversion efficiency of an organic solar cell. Our models based on machine learning can predict the HOMO of any donor molecule given the chemical formula of a compound in SMILES format. SMILES format allows us to represent the structure of a compound.  </p><p> When a user enters the SMILES formula, our system generates the molecular fingerprint for that compound. Diagram to the right depict the structural formula, SMILES representation and fingerprint of a typical chemical compound. Our system uses the fingerprint as attributes for the machine learning model. </p>
+  </i><br><br></div>
+	</body>
+
+	<div class="container">
+	<footer>Developed by Arindam Paul &amp; Reda Al-Bahrani- Center for Ultra-scale Computing and Information Security (CUCIS), EECS Department, Northwestern University, Evanston, IL 60208, USA</footer>
+	</div>
+
+
+</html>

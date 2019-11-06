@@ -1,0 +1,69 @@
+<html>
+<!-- this is a css file that is used to format the page -->
+<link rel=stylesheet media=screen href="/OPVPredictor/static/bootstrap.min.css">
+<head>
+
+	<!-- htmlTitle is a variable defined in __init__.py -->
+        <title>OPV Predictor</title>
+</head>
+<body>
+	<div class="container">
+	<header>
+		<div class="row">
+
+			<div class="text-center">
+				<h1>Organic Photovoltaic Predictor</h1>
+			</div>
+		</div>
+	</header>
+	</div>
+	<div class="container">
+	<nav class="navbar navbar-default">
+	<div class="navbar-header">
+	<!-- header bar -->
+	<ul class="nav navbar-nav">
+		<li role="presentation" class="active"><a href="#">Home</a></li>
+
+	</ul>
+	</div>
+	</nav>
+	</div>
+	<body>
+	<div class="container">
+	<p><small>Disclaimer: The outcome calculator results are estimates based on data from the <a href="https://figshare.com/articles/HOPV15_Dataset/1610063/4">HOPV'15</a> dataset. All results are provided for informational purposes only, in furtherance of the developers' educational mission.</small></p>
+<p align="center"> <img src="/OPVPredictor/static/OPVNew.png" width="350px"> <img src="/OPVPredictor/static/OPV.png" width="350px"></p>
+<p>Energy is generated when the solar energy excites the electrons (as depicted in the image on the left) which releases the electrons in the highest occupied molecular orbital(HOMO) in the donor layer. The electronic charge difference between the HOMO of the donor layer and lowest occupied molecular orbital(LUMO) determines the predicted power conversion efficiency of an organic solar cell. Our models based on machine learning can predict the HOMO of any donor molecule given the chemical formula of a compound in SMILES format. SMILES format allows us to represent the structure of a compound.  </p><p> When a user enters the SMILES formula, our system generates the molecular fingerprint for that compound. Diagram to the right depict the structural formula, SMILES representation and fingerprint of a typical chemical compound. Our system uses the fingerprint as attributes for the machine learning model. </p>    
+<p>Welcome to our online Calculator . The calculator is based on data obtained from the <a href="https://figshare.com/articles/HOPV15_Dataset/1610063/4">Harvard Organic Photovotaics 2015</a> dataset. To obtain HOMO value of your donor molecule, click on the submit button. The predicted HOMO value is calculated using random forest on AtomPair Fingerprints, and an average value across the 4 functionals(PBE, B3LYP,PB86 and M06) present in the HOPV'15 dataset.</p>
+  <p>Researchers can use this predicted HOMO value, and then use the Scharber model to find the power conversion efficiency by substituting the requisite LUMO values of acceptor molecules, filling factor, electrical fill factor and incident-light intensity.</p>
+  </div>
+	<div class="container">
+		<h4>The donor molecule formula you entered (in SMILES format)</h4>
+			<div class="row">
+			<!-- form is a variable defined in __init__.py -->
+			<form action="/OPVPredictor/" class="form-horizontal" id={{form}} method="POST">
+	<div class="form-group">
+					<div class="col-sm-10">
+        					<input class="form-control" type=text size=200 name=smiles_formula form=smiles_form value={{ selectString }}>
+					</div>
+          <br><br>
+				</div>
+			</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-default">Back to homepage</button>
+					</div>
+				</div>
+                        </form>
+			</div>
+		</div>
+	</div>
+    <br><br>
+	</body>
+  <div class="container">
+  <h4> {{template_text}} </h4>
+  </div>
+	<div class="container">
+	<footer>Developed by Arindam Paul &amp; Reda Al-Bahrani- Center for Ultra-scale Computing and Information Security (CUCIS), EECS Department, Northwestern University, Evanston, IL 60208, USA</footer>
+	</div>
+</body>
+</html>
