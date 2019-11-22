@@ -21,6 +21,14 @@ This calculator is published at (http://info.eecs.northwestern.edu/OPVPredictor)
 
 The code was developed by the <a href="http://cucis.ece.northwestern.edu/">CUCIS</a> group at the Electrical and Computer Engineering Department at Northwestern University. 
 
+1. Arindam Paul (arindam.paul@eecs.northwestern.edu)
+2. Ankit Agrawal (ankitag@eecs.northwestern.edu)
+3. Wei-keng Liao (wkliao@eecs.northwestern.edu)
+4. Alok Choudhary (choudhar@eecs.northwestern.edu)
+
+
+The development team would like thank our collaborator <a href="https://www.feinberg.northwestern.edu/faculty-profiles/az/profile.html?xid=40386">Prof. Alona Furmanchuk</a> from <a href="https://www.feinberg.northwestern.edu/">Northwestern Feinberg School of Medicine</a>. 
+
 
 ## Citation
 If you use this code or data, please cite:
@@ -30,7 +38,7 @@ Arindam Paul, Alona Furmanchuk, Wei-keng Liao, Alok Choudhary, Ankit Agrawal. Pr
 
 ## Questions/Comments:
 
-email: apaul@u.northwestern.edu<br/>
+email: arindam.paul@eecs.northwestern.edu or ankitag@eecs.northwestern.edu</br>
 Copyright (C) 2019, Northwestern University.<br/>
 See COPYRIGHT notice in top-level directory.
 
